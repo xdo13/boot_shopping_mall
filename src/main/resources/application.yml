@@ -1,0 +1,37 @@
+
+server:
+  port: 80
+
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: shop
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/webdb
+    username: dbuser
+    password: 12345
+  jpa:
+    properties :
+      hibernate:
+        format_sql : true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+
+logging:
+  level:
+    org:
+      thymeleaf: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
