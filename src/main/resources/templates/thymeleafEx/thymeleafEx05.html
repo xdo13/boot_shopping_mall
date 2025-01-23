@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 데이터 출력예제</title>
+</head>
+<body>
+<h2>타임리프 링크처리 예제 페이지</h2>
+    <div>
+      <a th:href="@{/thymeleaf/ex01}">예제1로 이동</a>
+    </div>
+    <div>
+      <a th:href="@{http://www.thymeleaf.org/}">타임리프 페이지</a>
+    </div>
+    <div>
+      <a th:href="@{/thymeleaf/ex06(param1 = '피라미터 데이터1',param2 = '피라미터 데이터2')}">thymeleaf 피라미터 전달</a>
+    </div>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
