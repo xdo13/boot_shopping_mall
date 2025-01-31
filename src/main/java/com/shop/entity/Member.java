@@ -3,16 +3,15 @@ package com.shop.entity;
 import com.shop.constant.Role;
 import com.shop.dto.MemberFormDto;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Setter
 @Getter
 @ToString
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Member {
 
@@ -43,7 +42,7 @@ public class Member {
                 .password(passwordEncoder.encode(memberFormDto.getPassword()))
                 .build();
 
-        String password = memberFormDto.getPassword();
+        //String password = memberFormDto.getPassword();
         return member;
     }
 }
